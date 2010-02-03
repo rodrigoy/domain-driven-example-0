@@ -10,33 +10,16 @@ http://www.aspercom.com.br/ead/course/view.php?id=18
 Para instalar esse exemplo você vai precisar ter os seguintes softwares instalados:
 
 - JDK 6: http://java.sun.com/javase/downloads/index.jsp
-- Maven2: http://maven.apache.org/download.html
 - Eclipse ou outra IDE qualquer
 
 Baixe este projeto do Github num diretório qualquer (vou usar /curso-ddd aqui). 
-Para baixar as dependências entre neste diretório (que possui o pom.xml) use o seguinte 
-comando do maven:
 
-mvn install
+O projeto já está configurado para uso no Eclipse, porém pode ser utilizado em qualquer IDE. 
+Será necessário acrescentar somente o JUnit4. Note que mesmo configurando tudo corretamente 
+ainda existem erros no projeto. Não tem problema! Isso é devido a algumas classes e testes 
+para auxiliar em iterações futuras do curso. 
 
-Se você está usando o Eclipse, use o seguinte comando para criar o projeto:
-
-mvn eclipse:eclipse
-
-Isso gerará o projeto e os classpaths configurados. Crie o projeto no eclipse. Você verá que 
-há problemas de build pois a variável M2_REPO não está configura. Crie esta variável no build 
-path. Geralmente o caminho é [home do usuário]/.m2/repository. Exemplo:
-
-/home/rodrigoy/.m2/repository
-
-Existe uma lib que não tem repositório no Maven e precisa ser adicionada manualmente no build
-path do projeto:
-
-/cursoddd/lib/warp-persist-1.0.1.jar
-
-Note que mesmo configurando tudo corretamente ainda existem erros no projeto. Não tem problema!
-Isso é devido a algumas classes e testes para auxiliar em iterações futuras do curso. Para testar
-sua instalação rode a seguinte classe de teste no JUnit.
+Para validar sua instalação rode a seguinte classe de teste no JUnit.
 
 /cursoddd/src/test/java/CadastrarQuartoTest.java
 
